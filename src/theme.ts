@@ -73,6 +73,12 @@ const config = defineConfig({
       },
     },
   },
+  globalCss: {
+    body: {
+      backgroundColor: "neutral.900",
+      color: "neutral.0",
+    },
+  },
 });
 
 export default createSystem(defaultConfig, config);
