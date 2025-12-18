@@ -4,6 +4,7 @@ import DropdownIcon from "./icon-dropdown.svg";
 import TodayLargeBg from "./bg-today-large.svg";
 import TodaySmallBg from "./bg-today-small.svg";
 import SunnyIcon from "./icon-sunny.webp";
+import CheckmarkIcon from "./icon-checkmark.svg";
 
 export {
   AppLogo,
@@ -12,4 +13,5 @@ export {
   TodayLargeBg,
   TodaySmallBg,
   SunnyIcon,
+  CheckmarkIcon,
 };

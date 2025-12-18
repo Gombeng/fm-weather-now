@@ -10,28 +10,13 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import {
-  AppLogo,
-  DropdownIcon,
-  SunnyIcon,
-  TodayLargeBg,
-  UnitsIcon,
-} from "./assets/images";
+import { DropdownIcon, SunnyIcon, TodayLargeBg } from "./assets/images";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <Container>
-      <Flex justifyContent={"space-between"} gap={"12"} py={"5"}>
-        <Box>
-          <Image src={AppLogo} />
-        </Box>
-
-        <Button bg={"neutral.700"} size={"sm"}>
-          <Image src={UnitsIcon} />
-          Units
-          <Image src={DropdownIcon} />
-        </Button>
-      </Flex>
+      <Navbar />
 
       <Heading
         fontSize={"5xl"}
