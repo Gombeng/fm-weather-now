@@ -2,7 +2,7 @@ import { Box, Flex, Image, Popover, Portal, Text } from "@chakra-ui/react";
 import { AppLogo, DropdownIcon, UnitsIcon } from "../../assets/images";
 import { useState } from "react";
 import ButtonComp from "../Button";
-import useNavbarStore from "../../stores/navbar";
+import useNavbarStore from "../../stores/useNavbarStore";
 import { UnitsOptions } from "./UnitOptions";
 import {
   precipitationOptions,

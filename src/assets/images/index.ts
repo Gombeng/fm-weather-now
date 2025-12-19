@@ -5,6 +5,8 @@ import TodayLargeBg from "./bg-today-large.svg";
 import TodaySmallBg from "./bg-today-small.svg";
 import SunnyIcon from "./icon-sunny.webp";
 import CheckmarkIcon from "./icon-checkmark.svg";
+import SearchIcon from "./icon-search.svg";
+import LoadingIcon from "./icon-loading.svg";
 
 export {
   AppLogo,
@@ -14,4 +16,6 @@ export {
   TodaySmallBg,
   SunnyIcon,
   CheckmarkIcon,
+  SearchIcon,
+  LoadingIcon,
 };
