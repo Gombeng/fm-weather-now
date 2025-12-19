@@ -18,14 +18,12 @@ export const useWeatherStore = create<WeatherState>((set) => ({
   locationResults: [],
   loadingLocation: false,
   location: {
-    current_weather: true,
-    temperature_unit: "celsius",
-    wind_speed_unit: "mph",
-    precipitation_unit: "inch",
-    latitude: -6.1818,
-    longitude: 106.8223,
-    hourly: "temperature_2m",
+    latitude: 52.52437,
+    longitude: 13.41053,
+    name: "Berlin",
+    country: "Germany",
   },
+
   weather: null,
   loadingWeather: false,
 

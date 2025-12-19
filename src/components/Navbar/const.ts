@@ -1,14 +1,14 @@
 export const tempratureOptions = [
-  { label: "Celcius (°C)", value: "c" },
-  { label: "Fahrenheit (°F)", value: "f" },
+  { label: "Celcius (°C)", value: "celsius" },
+  { label: "Fahrenheit (°F)", value: "fahrenheit" },
 ];
 
 export const windSpeedOptions = [
-  { label: "km/h", value: "km/h" },
+  { label: "km/h", value: "kmh" },
   { label: "mph", value: "mph" },
 ];
 
 export const precipitationOptions = [
   { label: "Milimeters (mm)", value: "mm" },
-  { label: "Inches (in)", value: "in" },
+  { label: "Inches (in)", value: "inch" },
 ];

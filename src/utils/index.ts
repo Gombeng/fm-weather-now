@@ -8,3 +8,5 @@ export function formatWeatherDate(isoTime: string): string {
     year: "numeric",
   });
 }
+
+export * from "./getWeatherIcon";

@@ -1,9 +1,9 @@
 import { create } from "zustand";
 
 type UnitSystem = "metric" | "imperial";
-type TemperatureUnit = "c" | "f";
-type WindSpeedUnit = "km/h" | "mph";
-type PrecipitationUnit = "mm" | "in";
+type TemperatureUnit = "celsius" | "fahrenheit";
+type WindSpeedUnit = "kmh" | "mph";
+type PrecipitationUnit = "mm" | "inch";
 
 interface INavbarStore {
   system: UnitSystem;
@@ -19,8 +19,8 @@ interface INavbarStore {
 const useNavbarStore = create<INavbarStore>((set) => ({
   system: "metric",
   units: {
-    temprature: "c",
-    windSpeed: "km/h",
+    temprature: "celsius",
+    windSpeed: "kmh",
     precipitation: "mm",
   },
 
@@ -38,9 +38,9 @@ const useNavbarStore = create<INavbarStore>((set) => ({
         return {
           system,
           units: {
-            temprature: "f",
+            temprature: "fahrenheit",
             windSpeed: "mph",
-            precipitation: "in",
+            precipitation: "inch",
           },
         };
       }
@@ -48,8 +48,8 @@ const useNavbarStore = create<INavbarStore>((set) => ({
       return {
         system,
         units: {
-          temprature: "c",
-          windSpeed: "km/h",
+          temprature: "celsius",
+          windSpeed: "kmh",
           precipitation: "mm",
         },
       };

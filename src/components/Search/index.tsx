@@ -17,6 +17,7 @@ import { useGetLocation } from "../../hooks/query/useGetLocation";
 export default function SearchComp() {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
+  const { setLocation } = useWeatherStore();
 
   const debouncedQuery = useDebounce(query, 300);
 
@@ -24,8 +25,6 @@ export default function SearchComp() {
     useGetLocation(debouncedQuery, {
       onSuccess: () => setOpen(true),
     });
-
-  const { setLocation } = useWeatherStore();
 
   const handleSelect = (item: any) => {
     setQuery(item.name);
