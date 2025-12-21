@@ -16,6 +16,7 @@ import { useGetWeather } from "./hooks/query/useGetWeather";
 import { useWeatherStore } from "./stores/useWeatherStore";
 import CurrentWeather from "./components/CurrentWeather";
 import useNavbarStore from "./stores/useNavbarStore";
+import DailyForecast from "./components/DailyForecast";
 
 function App() {
   const { location, setWeather } = useWeatherStore();
@@ -40,28 +41,7 @@ function App() {
         <GridItem colSpan={2}>
           <Flex flexDir={"column"}>
             <CurrentWeather data={weatherData} isLoading={isLoading} />
-
-            <Box mb={"6"}>
-              <Text mb={"3"} fontSize={"lg"}>
-                Daily forecast
-              </Text>
-
-              <SimpleGrid columns={3} gap={"3"}>
-                {Array.from({ length: 7 }).map(() => (
-                  <Card.Root>
-                    <Card.Body p={"2"}>
-                      <Text textAlign={"center"}>Tue</Text>
-                      <Image src={SunnyIcon} />
-
-                      <Flex justifyContent={"space-between"}>
-                        <Text>20&deg;</Text>
-                        <Text>30&deg;</Text>
-                      </Flex>
-                    </Card.Body>
-                  </Card.Root>
-                ))}
-              </SimpleGrid>
-            </Box>
+            <DailyForecast data={weatherData} isLoading={isLoading} />
           </Flex>
         </GridItem>
 

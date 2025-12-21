@@ -9,7 +9,6 @@ interface IInfoCard {
 }
 
 export default function InfoCard({ title, value, unit, isLoading }: IInfoCard) {
-  console.log("unit: ", unit === "inch");
   const renderUnit = unit === "inch" ? formatShortNumber(Number(value)) : value;
 
   return (
@@ -21,7 +20,16 @@ export default function InfoCard({ title, value, unit, isLoading }: IInfoCard) {
           </Text>
 
           <Text fontSize="3xl" fontWeight={"extralight"} color="neutral.0">
-            {isLoading ? "--" : `${renderUnit} ${unit}`}
+            {isLoading ? (
+              "--"
+            ) : (
+              <>
+                {renderUnit}{" "}
+                <Text fontSize={"xl"} display={"inline"}>
+                  {unit}
+                </Text>
+              </>
+            )}
           </Text>
         </Flex>
       </Card.Body>

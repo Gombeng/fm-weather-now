@@ -13,7 +13,7 @@ export default function CurrentWeather({ data, isLoading }: ICurrentWeather) {
     <Box mb={"6"}>
       <MainCard data={data} isLoading={isLoading} />
 
-      <SimpleGrid columns={{ base: 2, md: 4 }} gap="3">
+      <SimpleGrid columns={{ base: 2, lg: 4 }} gap="3">
         {infoCards.map(({ title, valueKey, unit, unitKey }) => (
           <InfoCard
             key={title}

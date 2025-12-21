@@ -34,12 +34,13 @@ export default function MainCard({ data, isLoading }: ICurrentWeather) {
           </Flex>
         ) : (
           <Flex
-            flexDir={{ base: "column", md: "row" }}
+            flexDir={{ base: "column", lg: "row" }}
             justifyContent={"space-between"}
             alignItems={{ base: "initial", md: "center" }}
             h={{ md: "18vh" }}
+            gap={'3'}
           >
-            <Box textAlign={{ base: "center", md: "left" }}>
+            <Box textAlign={{ base: "center", lg: "left" }}>
               <Text
                 fontWeight={"bold"}
                 fontSize={"xl"}

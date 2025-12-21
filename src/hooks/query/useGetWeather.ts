@@ -28,11 +28,8 @@ export function useGetWeather({ location, units }: any, options = {}) {
           //   // "temperature_2m",
           //   "apparent_temperature",
           // ],
-          // daily: [
-          //   // "temperature_2m",
-          //   "apparent_temperature_max",
-          // ],
-          // forecast_days: 1,
+          daily: ["temperature_2m_max", "temperature_2m_min", "weather_code"],
+          forecast_days: 7,
         },
       });
       return data;
