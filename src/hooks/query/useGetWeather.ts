@@ -24,12 +24,8 @@ export function useGetWeather({ location, units }: any, options = {}) {
             "temperature_2m",
           ],
 
-          // hourly: [
-          //   // "temperature_2m",
-          //   "apparent_temperature",
-          // ],
+          hourly: ["temperature_2m", "weather_code"],
           daily: ["temperature_2m_max", "temperature_2m_min", "weather_code"],
-          forecast_days: 7,
         },
       });
       return data;

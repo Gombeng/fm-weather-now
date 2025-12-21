@@ -1,13 +1,13 @@
 import { Box, SimpleGrid, Text } from "@chakra-ui/react";
-import type { ICurrentWeather } from "../CurrentWeather";
+import type { IApiProps } from "../CurrentWeather";
 import { getWeatherIcon, mapDailyWeather } from "../../utils";
 import SkeletonCard from "./SkeletonCard";
 import DailyCard from "./DailyCard";
 
-export default function DailyForecast({ data, isLoading }: ICurrentWeather) {
+export default function DailyForecast({ data, isLoading }: IApiProps) {
   const days = mapDailyWeather(data?.daily);
   return (
-    <Box mb={"6"}>
+    <Box>
       <Text mb={"3"} fontSize={"lg"}>
         Daily forecast
       </Text>

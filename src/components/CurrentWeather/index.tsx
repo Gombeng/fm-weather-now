@@ -3,14 +3,14 @@ import MainCard from "./MainCard";
 import InfoCard from "./InfoCard";
 import { infoCards } from "./const";
 
-export interface ICurrentWeather {
+export interface IApiProps {
   data: any;
   isLoading: boolean;
 }
 
-export default function CurrentWeather({ data, isLoading }: ICurrentWeather) {
+export default function CurrentWeather({ data, isLoading }: IApiProps) {
   return (
-    <Box mb={"6"}>
+    <Box>
       <MainCard data={data} isLoading={isLoading} />
 
       <SimpleGrid columns={{ base: 2, lg: 4 }} gap="3">

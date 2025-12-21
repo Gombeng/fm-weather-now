@@ -8,6 +8,7 @@ interface IButtonComp {
   bg?: string;
   _hover?: { bg: string };
   onClick?: () => void;
+  px?: string;
 }
 
 export default function ButtonComp({
@@ -21,6 +22,7 @@ export default function ButtonComp({
       bg={bg || "neutral.700"}
       size={size || { base: "xs", sm: "sm", md: "md", lg: "lg" }}
       borderRadius={"lg"}
+      color={"neutral.0"}
       {...props}
     >
       {children}

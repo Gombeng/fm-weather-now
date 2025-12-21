@@ -1,10 +1,10 @@
 import { Box, Card, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { LoadingIcon, TodayLargeBg, TodaySmallBg } from "../../assets/images";
 import { formatWeatherDate, getWeatherIcon } from "../../utils";
-import type { ICurrentWeather } from ".";
+import type { IApiProps } from ".";
 import { useWeatherStore } from "../../stores/useWeatherStore";
 
-export default function MainCard({ data, isLoading }: ICurrentWeather) {
+export default function MainCard({ data, isLoading }: IApiProps) {
   const { location } = useWeatherStore();
 
   return (
@@ -38,7 +38,7 @@ export default function MainCard({ data, isLoading }: ICurrentWeather) {
             justifyContent={"space-between"}
             alignItems={{ base: "initial", md: "center" }}
             h={{ md: "18vh" }}
-            gap={'3'}
+            gap={"3"}
           >
             <Box textAlign={{ base: "center", lg: "left" }}>
               <Text

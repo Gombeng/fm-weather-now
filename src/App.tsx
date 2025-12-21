@@ -1,15 +1,4 @@
-import {
-  Box,
-  Button,
-  Card,
-  Container,
-  Flex,
-  GridItem,
-  Image,
-  SimpleGrid,
-  Text,
-} from "@chakra-ui/react";
-import { DropdownIcon, SunnyIcon } from "./assets/images";
+import { Container, Flex, GridItem, SimpleGrid } from "@chakra-ui/react";
 import Navbar from "./components/Navbar";
 import SearchComp from "./components/Search";
 import { useGetWeather } from "./hooks/query/useGetWeather";
@@ -17,6 +6,7 @@ import { useWeatherStore } from "./stores/useWeatherStore";
 import CurrentWeather from "./components/CurrentWeather";
 import useNavbarStore from "./stores/useNavbarStore";
 import DailyForecast from "./components/DailyForecast";
+import HourlyForecast from "./components/HourlyForecast";
 
 function App() {
   const { location, setWeather } = useWeatherStore();
@@ -32,55 +22,21 @@ function App() {
   );
 
   return (
-    <Container maxW={"5xl"} className="dark">
+    <Container maxW={"5xl"} className="dark" pb={"6"}>
       <Navbar />
       <SearchComp />
       {/* <Heading textAlign={"center"}>No search result found!</Heading> */}
 
-      <SimpleGrid columns={{ base: 0, md: 3 }} gap={"6"}>
-        <GridItem colSpan={2}>
-          <Flex flexDir={"column"}>
+      <SimpleGrid columns={{ base: 0, md: 3 }} gap={{ base: 6, md: 3 }}>
+        <GridItem colSpan={{ base: 0, md: 2 }}>
+          <Flex flexDir={"column"} gap={6}>
             <CurrentWeather data={weatherData} isLoading={isLoading} />
             <DailyForecast data={weatherData} isLoading={isLoading} />
           </Flex>
         </GridItem>
 
         <GridItem>
-          <Box pb={"8"}>
-            <Card.Root>
-              <Card.Body p={"3"}>
-                <Flex
-                  justifyContent={"space-between"}
-                  alignItems={"center"}
-                  mb={"3"}
-                >
-                  <Text>Hourly forecast</Text>
-                  <Button>
-                    Tuesday <Image src={DropdownIcon} />
-                  </Button>
-                </Flex>
-
-                <SimpleGrid gap={"3"}>
-                  {Array.from({ length: 8 }).map(() => (
-                    <Card.Root>
-                      <Card.Body
-                        flexDir={"row"}
-                        p={"1"}
-                        alignItems={"center"}
-                        justifyContent={"space-between"}
-                      >
-                        <Flex alignItems={"center"}>
-                          <Image src={SunnyIcon} w={"12"} />
-                          <Text>3 PM</Text>
-                        </Flex>
-                        <Text me={"3"}>67&deg;</Text>
-                      </Card.Body>
-                    </Card.Root>
-                  ))}
-                </SimpleGrid>
-              </Card.Body>
-            </Card.Root>
-          </Box>
+          <HourlyForecast data={weatherData} isLoading={isLoading} />
         </GridItem>
       </SimpleGrid>
     </Container>
