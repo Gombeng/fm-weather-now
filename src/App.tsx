@@ -31,7 +31,7 @@ function App() {
   );
 
   return (
-    <Container maxW={"5xl"}>
+    <Container maxW={"5xl"} className="dark">
       <Navbar />
       <SearchComp />
       {/* <Heading textAlign={"center"}>No search result found!</Heading> */}

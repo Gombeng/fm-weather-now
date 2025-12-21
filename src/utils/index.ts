@@ -10,3 +10,7 @@ export function formatWeatherDate(isoTime: string): string {
 }
 
 export * from "./getWeatherIcon";
+
+export function formatShortNumber(n: number, decimals = 2) {
+  return Number(n.toFixed(decimals)).toString();
+}

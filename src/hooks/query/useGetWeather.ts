@@ -11,15 +11,28 @@ export function useGetWeather({ location, units }: any, options = {}) {
         params: {
           latitude,
           longitude,
-          current_weather: true,
 
           temperature_unit: units.temprature,
           wind_speed_unit: units.windSpeed,
           precipitation_unit: units.precipitation,
 
-          // hourly: "temperature_2m",
-          // daily: "",
-          forecast_days: 7,
+          current: [
+            "apparent_temperature",
+            "precipitation",
+            "wind_speed_10m",
+            "relative_humidity_2m",
+            "temperature_2m",
+          ],
+
+          // hourly: [
+          //   // "temperature_2m",
+          //   "apparent_temperature",
+          // ],
+          // daily: [
+          //   // "temperature_2m",
+          //   "apparent_temperature_max",
+          // ],
+          // forecast_days: 1,
         },
       });
       return data;
